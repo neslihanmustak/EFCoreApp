@@ -56,6 +56,4 @@ dotnet run
 - `appsettings.Development.json` repoya dahil edilmez. Gizli bilgiler icin User Secrets veya ortam degiskenleri kullanin.
 - Varsayilan rota: `/Home/Index`
 
-## Lisans
 
-MIT (degistirmek istersen guncelleyebilirim).
