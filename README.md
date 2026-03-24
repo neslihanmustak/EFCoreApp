@@ -17,6 +17,7 @@ Bu proje, bir kurs otomasyonu / ogrenci takip sistemi ornegidir. Temel amac, ogr
 
 - .NET SDK (6.0+)
 - SQL Server (LocalDB, SQL Express veya tam kurulum)
+- LibMan CLI (frontend kutuphanelerini indirmek icin)
 
 ## Kurulum
 
@@ -39,13 +40,20 @@ Alternatif olarak ortam degiskeni ile:
 $env:ConnectionStrings__DefaultConnection="Server=YOUR_SERVER;Database=efCoreTestDb;Trusted_Connection=True;TrustServerCertificate=True;"
 ```
 
-2. Veritabani olustur (migrations varsa):
+2. Frontend kutuphanelerini indir:
+
+```
+dotnet tool install -g Microsoft.Web.LibraryManager.Cli
+libman restore
+```
+
+3. Veritabani olustur (migrations varsa):
 
 ```
 dotnet ef database update
 ```
 
-3. Uygulamayi calistir:
+4. Uygulamayi calistir:
 
 ```
 dotnet run
@@ -55,5 +63,4 @@ dotnet run
 
 - `appsettings.Development.json` repoya dahil edilmez. Gizli bilgiler icin User Secrets veya ortam degiskenleri kullanin.
 - Varsayilan rota: `/Home/Index`
-
 

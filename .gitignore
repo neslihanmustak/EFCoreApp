@@ -1,28 +1,44 @@
 # Build outputs
-bin/
-obj/
+[Bb]in/
+[Oo]bj/
 
-# Visual Studio
+# Visual Studio / VS Code / Rider
 .vs/
-*.user
+.vscode/
+.idea/
 *.suo
+*.user
 *.userosscache
 *.sln.docstates
-
-# Rider
-.idea/
+*.userprefs
 
 # OS files
 .DS_Store
 Thumbs.db
 
-# Logs
+# Logs & temp
 *.log
-
-# Env / secrets
-*.env
-appsettings.Development.json
-
-# Misc
 *.cache
 *.tmp
+
+# Frontend vendor
+wwwroot/lib/
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+
+# Test results / coverage
+TestResults/
+*.coverage
+*.coveragexml
+
+# ASP.NET Core secrets / configs
+appsettings.*.json
+!appsettings.json
+*.env
+
+# Misc
+*.bak
+*.old
